@@ -1,0 +1,267 @@
+/* note for colors teal #008182 dk teal #025f5f gray #b4b4b4  */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "saira condensed", Arial, Helvetica, sans-serif;
+  color: white;
+}
+body {
+  background-color: #2c2c30;
+}
+.mainContainer {
+  background-color: #2c2c30;
+  width: 100%;
+  position: relative;
+}
+/* navigation */
+.nav__toggle {
+  position: abosolute;
+  cursor: pointer;
+}
+.close {
+  display: none;
+}
+.nav__checkbox {
+  display: none;
+}
+.nav_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav__menu li:nth-child(4) {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  background-color: transparent;
+}
+.nav__menu li {
+  display: none;
+  background-color: #616164;
+}
+#nav__checkbox:checked ~ ul.nav__menu li {
+  display: block;
+}
+#nav__checkbox:checked ~ label.nav__toggle .close {
+  display: block;
+}
+#nav__checkbox:checked ~ label.nav__toggle .menu {
+  display: none;
+}
+/* end navigation */
+.header {
+  width: 100vw;
+  padding-top: 110px;
+  position: fixed;
+  background-color: #2c2c30;
+  z-index: 9999;
+}
+.logo {
+  width: 250px;
+}
+.navBar {
+  background-color: #008182;
+  height: 40px;
+  padding: 0 5px;
+}
+.bodyContainer {
+  padding: 175px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.backgroundContainer {
+  width: 100%;
+  background-color: rgba(44, 44, 48, 0.9);
+  background-image: url(/static/assets/background10.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.inspiration {
+  padding: 10px 0;
+  text-align: center;
+}
+.aboutPhoto {
+  max-width: 100%;
+}
+.entryPhoto {
+  max-width: 100%;
+}
+.entryPhoto > img {
+  width: 100%;
+}
+.address {
+  padding: 10px 0;
+  max-width: fit-content;
+}
+.bookNow {
+  width: 150px;
+  height: 40px;
+  padding: 5px;
+  background-color: #025f5f;
+  font-weight: 600;
+  font-size: x-large;
+  border-radius: 50px;
+  text-align: center;
+  margin: 10px 0;
+}
+.hoursOfOperation {
+  padding: 10px 0;
+}
+table.hoursTable {
+  margin: 10px 0;
+  width: 300px;
+  text-align: center;
+  border-collapse: collapse;
+  line-height: 20px;
+}
+table.hoursTable td:nth-child(even) {
+  background-color: #616164;
+}
+/*team section*/
+.teamContainer {
+  border-top: 1px solid #025f5f;
+  padding: 10px 0;
+}
+.bioButton {
+  all: unset;
+  cursor: pointer;
+  background-color: #2c2c30;
+  width: 98%;
+  margin: 1%;
+}
+.bioContainer {
+  display: grid;
+  justify-items: start;
+  padding: 10px;
+  width: 100;
+}
+.teamPhoto img {
+  width: 150px;
+  padding-right: 5px;
+  grid-row: 1;
+  grid-column: 1/1;
+}
+.about {
+  grid-row: 1;
+  grid-column: 2/6;
+}
+.position {
+  color: #008182;
+}
+h3 {
+  text-transform: uppercase;
+}
+/*contact page*/
+.contactPage {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bioContact {
+  background-color: #2c2c30;
+
+  padding: 10px;
+}
+/*bio page*/
+.uniqueContainer {
+  display: grid;
+  align-items: center;
+}
+.bioPhoto {
+  grid-column: 1/1;
+  grid-row: 1/4;
+}
+.phone {
+  grid-column: 2/6;
+  grid-row: 1;
+}
+.facebook {
+  grid-column: 2/6;
+  grid-row: 2;
+}
+.instagram {
+  grid-column: 2/6;
+  grid-row: 3;
+}
+.bioSocialIcon {
+  width: 25px;
+  padding-right: 5px;
+}
+.facebook,
+.instagram,
+.phone {
+  display: flex;
+  align-items: center;
+}
+/*social media icons*/
+.socialMedia {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+.socialMedia img {
+  padding: 0 20px;
+  width: 50px;
+}
+/*footer*/
+footer {
+  text-align: center;
+  border-top: 2px solid #025f5f;
+  margin: 10px;
+}
+
+/* add page */
+button {
+  background-color: #025f5f;
+}
+input {
+  color: black;
+}
+textarea {
+  color: black;
+}
+@media only screen and (min-width: 768px) {
+  .header {
+    padding-top: 140px;
+  }
+  .navBar {
+    display: flex;
+    font-size: 26px;
+    align-items: baseline;
+    justify-content: center;
+  }
+  /* navigation */
+  .nav__toggle {
+    display: none;
+  }
+  .nav__menu li {
+    display: inline-block;
+    background-color: transparent;
+    padding: 0 7px;
+  }
+  .nav__menu li:nth-child(3) {
+    width: 210px;
+  }
+  .nav__menu li:nth-child(5) {
+    width: 210px;
+    text-align: right;
+  }
+  .nav__menu li:nth-child(4) {
+    transform: translateX(-52%);
+  }
+  /* end navigation */
+  .logo {
+    width: 300px;
+  }
+  .bodyContainer {
+    max-width: 768px;
+    margin: auto;
+    padding-top: 195px;
+    font-size: larger;
+  }
+}

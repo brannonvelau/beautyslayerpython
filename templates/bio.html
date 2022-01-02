@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="uniqueContainer">
+  <img class="bioPhoto" src="static/biopics/{{slayer[0][0]}}">
+  <div class="phone">
+    <img class="bioSocialIcon" src="static/assets/phone.png">
+    <a href="tel:{{slayer[0][5]}}">{{slayer[0][5]}}</a>
+  </div>
+  {%if slayer[0][7] == ''%}
+  {%else%}
+  <div class="facebook">
+    <img class="bioSocialIcon" src="/static/assets/facebook.png"><a href="{{slayer[0][7]}}">Visit my Facbook Page</a>
+  </div>
+  <br>
+  {%endif%}
+  {%if slayer[0][6] == ''%}
+  {%else%}
+  <div class="instagram">
+    <img class="bioSocialIcon" src="/static/assets/instagram.png"><a href="{{slayer[0][6]}}">View my Instagram</a>
+  </div><br>
+  {%endif%}
+
+</div>
+<h3> {{slayer[0][3]}}</h3>
+<p class="position">{{slayer[0][4]}}</p>
+<div class="bookNow">
+  <a href="{{booksite}}">BOOK
+    NOW</a>
+</div>
+<p class="block-with-text"> {{slayer[0][8]}}</p>
+</div>
+
+{%endblock%}

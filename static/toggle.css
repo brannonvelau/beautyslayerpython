@@ -1,0 +1,152 @@
+/* note for colors teal #02807f dk teal #015f61 gray #b2b2b2  */
+/* hair */
+.hair__toggle {
+  position: abosolute;
+  cursor: pointer;
+}
+.hair__checkbox {
+  display: none;
+}
+.hair__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.hair__menu li {
+  display: none;
+  background-color: #616164;
+}
+#hair__checkbox:checked ~ ul.hair__menu li {
+  display: block;
+}
+#hair__checkbox:checked ~ label.hair__toggle .title {
+  color: #008182;
+}
+/* end hair */
+
+/* nail */
+.nail__toggle {
+  position: abosolute;
+  cursor: pointer;
+}
+.nail__checkbox {
+  display: none;
+}
+.nail__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.nail__menu li {
+  display: none;
+  background-color: #616164;
+}
+#nail__checkbox:checked ~ ul.nail__menu li {
+  display: block;
+}
+#nail__checkbox:checked ~ label.nail__toggle .title {
+  color: #008182;
+}
+/* end nail */
+
+/* facial */
+.facial__toggle {
+  position: abosolute;
+  cursor: pointer;
+}
+.facial__checkbox {
+  display: none;
+}
+.facial__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.facial__menu li {
+  display: none;
+  background-color: #616164;
+}
+#facial__checkbox:checked ~ ul.facial__menu li {
+  display: block;
+}
+#facial__checkbox:checked ~ label.facial__toggle .title {
+  color: #008182;
+}
+/* end facial */
+
+/* lash */
+.lash__toggle {
+  position: abosolute;
+  cursor: pointer;
+}
+.lash__checkbox {
+  display: none;
+}
+.lash__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.lash__menu li {
+  display: none;
+  background-color: #616164;
+}
+#lash__checkbox:checked ~ ul.lash__menu li {
+  display: block;
+}
+#lash__checkbox:checked ~ label.lash__toggle .title {
+  color: #008182;
+}
+/* end lash */
+
+/* wax */
+.wax__toggle {
+  position: abosolute;
+  cursor: pointer;
+}
+.wax__checkbox {
+  display: none;
+}
+.wax__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.wax__menu li {
+  display: none;
+  background-color: #616164;
+}
+#wax__checkbox:checked ~ ul.wax__menu li {
+  display: block;
+}
+#wax__checkbox:checked ~ label.wax__toggle .title {
+  color: #008182;
+}
+/* end wax */
+
+/* massage */
+.massage__toggle {
+  position: abosolute;
+  cursor: pointer;
+}
+.massage__checkbox {
+  display: none;
+}
+.massage__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.massage__menu li {
+  display: none;
+  background-color: #616164;
+}
+#massage__checkbox:checked ~ ul.massage__menu li {
+  display: block;
+}
+#massage__checkbox:checked ~ label.massage__toggle .title {
+  color: #008182;
+}
+/* end massage */
+
+/* toggle for read mores */

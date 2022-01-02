@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="inspiration">
+  <h2>Our salon is your new home! Every client and every budget deserves a place in our chairs. We spread beauty, love
+    and laughter all throughout Havasu one client at a time. Family owned and operated.</h2>
+</div>
+<div class="backgroundContainer">
+  <div class="noNameContainer">
+    <div class="entryPhoto">
+      <img src="./static/assets/entry.jpg">
+    </div>
+    <div class="address">
+      <a href='https://maps.google.com/?q=2163+Birch+square+lake+havasu+city+AZ+86403'>
+        <a href='https://maps.apple.com/maps?q=2163+Birch+square+lake+havasu+city+AZ+86403'>
+          <h3>LOCATION</h3>
+          <h5> 2163 Birch Square
+            <br> Lake Havasu City, AZ 86403
+          </h5>
+        </a></a>
+      <h4><a href="tel:9282086993">Salon Phone 928.208.6993</a><br><a href=contact.html>Team Contact List</a></h4>
+      <div class="bookNow">
+        <a href="{{booksite}}">BOOK
+          NOW</a>
+      </div>
+    </div>
+  </div>
+  <div class="hoursOfOperation">
+    <h3>HOURS</h3>
+    <table class="hoursTable">
+      <tr>
+        <td>MON</td>
+        <td>TUE</td>
+        <td>WED</td>
+        <td>THU</td>
+        <td>FRI</td>
+        <td>SAT</td>
+        <td>SUN</td>
+      </tr>
+      <tr>
+        <td>__</td>
+        <td>__</td>
+        <td>__</td>
+        <td>__</td>
+        <td>__</td>
+        <td>__</td>
+        <td>__</td>
+      </tr>
+      <tr>
+        <td>9AM</td>
+        <td>9AM</td>
+        <td>9AM</td>
+        <td>9AM</td>
+        <td>9AM</td>
+        <td>9AM</td>
+        <td>C<br>L</td>
+      </tr>
+      <tr>
+        <td>to</td>
+        <td>to</td>
+        <td>to</td>
+        <td>to</td>
+        <td>to</td>
+        <td>to</td>
+        <td>O<br>S</td>
+      </tr>
+      <tr>
+        <td>5PM</td>
+        <td>5PM</td>
+        <td>5PM</td>
+        <td>5PM</td>
+        <td>5PM</td>
+        <td>5PM</td>
+        <td>E<br>D</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="teamContainer">
+    <h1>MEET OUR TEAM</h1>
+    {%for slayer in slayerList%}
+    <form class="bioSelect" onsubmit=aciton="/" method="post">
+      <button class="bioButton" name="moreInfo" value="moreInfo" type="submit">
+        <input type="hidden" value="{{slayer[9]}}" name="slayerChoice">
+        <div class="bioContainer">
+          <div class="teamPhoto">
+            <img src="static/biopics/{{slayer[0]}}">
+          </div>
+          <div class="about">
+            <h3> {{slayer[3]}}</h3>
+            <p class="position">{{slayer[4]}}</p>
+          </div>
+        </div>
+      </button>
+    </form>
+
+    <br>
+    {%endfor%}
+  </div>
+
+
+
+  {% endblock %}

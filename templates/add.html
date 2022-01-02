@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block body %}
+<form class="addForm" onsubmit=action="/add" method="post">
+  <label for="photo">Photo: </label><input type="file" id="photo" name="photo"><br>
+  <label for="fName">First Name: </label><input type="text" id="fName" name="fName">
+  <label for="lName">Last Name: </label><input type="text" id="lName" name="lName"><br>
+  <label for="bName">Business Name: </label><input type="text" id="bName" name="bName">
+  <label for="position">Position: </label><input type="text" id="position" name="position"><br>
+  <label for="phone">Phone number (enter as xxx.xxx.xxxx): </label><input type="text" id="phone" name="phone"><br>
+  <label for="instagram">Instagram link: </label><input type="text" id="instagram" name="instagram">
+  <label for="facebook">Facebook link: </label><input type="text" id="facebook" name="facebook"><br>
+  <label for="profile">Profile: </label><textarea id="profile" name="profile" rows="5" cols="50"></textarea>
+  <br>
+
+  <button value="submit" name="submit" type="submit">Add Slayer</button>
+</form>
+
+<h3>List of current slayers:</h3>
+{%for slayer in slayerList%}
+{{slayer[9]}} {{slayer[1]}},
+{%endfor%}
+<form class="deleteForm" onsubmit=action="/add" method="post">
+  <label>Enter number to delete: </label><input type="text" id="other" name="other">
+  <button value="delete" name="delete" type="delete">DELETE</button>
+</form>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="backgroundContainer">
+  <div class="noNameContainer">
+    <div class="contactPage">
+      <h1>STAY IN THE KNOW</h1>
+      <div class="bookNow">
+        <a href="{{booksite}}">BOOK
+          NOW</a>
+      </div>
+
+      {% for slayer in slayerList %}
+      <div class="contactPage">
+        <div class="bioContact">
+          <h3>{{slayer[3]}}</h3>
+          <div class="phone">
+            <img class="bioSocialIcon" src="/static/assets/phone.png">{{slayer[5]}}
+          </div>
+          {%if slayer[7] == ''%}
+          {%else%}
+          <div class="facebook">
+            <img class="bioSocialIcon" src="/static/assets/facebook.png"><a href="{{slayer[7]}}">Visit my Facebook
+              Page</a>
+          </div>
+          {%endif%}
+          {%if slayer[6] == ''%}
+          {%else%}
+          <div class="instagram">
+            <img class="bioSocialIcon" src="/static/assets/instagram.png"><a href="{{slayer[6]}}">View my Instagram</a>
+          </div>
+          {%endif%}
+        </div>
+      </div>
+      <br>
+      {% endfor %}
+      {% endblock %}
